@@ -8,9 +8,7 @@ hero.commands = new Collection();
 if(auth.token.toLowerCase() === 'heroku') {
     hero.login(process.env.BOT_TOKEN);
 } else {
-    hero.login(auth.token);
-}
-
+    hero.login(auth.token);}
 fs.readdir('./Commands',function(err, files) {
     if(err) console.log(err);
     let cmds = files.filter(r => r.split('.').pop() === 'js');
